@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Es hora dedededel duelo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+    </header>
+
+
+    <section id="container" class="container">
+        
+    </section>
+
+   
+
+
+    <script>
+        async function populate() {
+
+            const requestURL = 'yugioh.json';
+            const request = new Request(requestURL);
+
+            const response = await fetch(request);
+            const superHeroesText = await response.text();
+
+            const superHeroes = JSON.parse(superHeroesText);
+            populateHeader(superHeroes);
+            populateHeroes(superHeroes);
+        }
+
+        function populateHeader(obj) {
+            const header = document.querySelector('header');
+            const myH1 = document.createElement('h1');
+            myH1.textContent = obj.deck;
+            header.appendChild(myH1);
+
+            const myPara = document.createElement('p');
+            myPara.textContent = `Baraja: ${obj.deckName} - Por: ${obj.author}`;
+            header.appendChild(myPara);
+        }
+
+        function populateHeroes(obj) {
+            const section = document.querySelector('section');
+            const heroes = obj.members;
+
+            for (const hero of heroes) {
+                createCard(hero.cardName, hero.caption,hero.url,hero.description);
+            }
+        }
+
+        function createCard(title, caption, imgURL, description) {
+            const container = document.getElementById('container');
+            const cardDiv = document.createElement("div");
+            cardDiv.classList.add("img-card", "container");
+
+            const cardContentDiv = document.createElement("div");
+            cardContentDiv.classList.add("card-content");
+
+            const cardImageDiv = document.createElement("div");
+            cardImageDiv.classList.add("card-image");
+
+            const img = document.createElement("img");
+            img.src = imgURL;
+            cardImageDiv.appendChild(img);
+
+            const titleSpan = document.createElement("span");
+            titleSpan.classList.add("card-title");
+            titleSpan.textContent = title;
+
+            const captionSpan = document.createElement("div");
+            captionSpan.classList.add("card-caption");
+            captionSpan.textContent = caption;
+
+            const cardTextDiv = document.createElement("div");
+            cardTextDiv.classList.add("card-text");
+
+            const p = document.createElement("p");
+            p.innerHTML = description;
+
+            cardTextDiv.appendChild(p);
+
+            const cardLinkDiv = document.createElement("div");
+            cardLinkDiv.classList.add("card-link");
+
+            const a = document.createElement("a");
+            a.href = "#";
+            a.title = "Read Full";
+
+            const span = document.createElement("span");
+            span.textContent = "Usar";
+
+            a.appendChild(span);
+            cardLinkDiv.appendChild(a);
+
+            cardContentDiv.appendChild(captionSpan);
+            cardContentDiv.appendChild(cardImageDiv);
+            cardContentDiv.appendChild(titleSpan);
+            cardContentDiv.appendChild(cardTextDiv);
+
+            cardDiv.appendChild(cardContentDiv);
+            cardDiv.appendChild(cardLinkDiv);
+
+            container.appendChild(cardDiv)
+
+            return cardDiv;
+        }
+
+        
+
+        populate();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+{
+    "deck": "Cartas YuGiOh",
+    "deckName": "Magos",
+    "author": "Andrés López",
+    "members": [
+        {
+            "cardName": "Mago Oscuro",
+            "url": "https://images.ygoprodeck.com/images/cards_cropped/46986419.jpg",
+            "caption": "Oscuridad",
+            "description":"El ultimo brujo en terminos de ataque y defensa."
+            
+        },
+        {
+            "cardName": "Mago Oscuro Toon",
+            "url": "https://images.ygoprodeck.com/images/cards_cropped/21296502.jpg",
+            "caption": "Oscuridad",
+            "description":"no se puede atacar en el turno que es invocado."
+            
+        },
+        {
+            "cardName": "Maga Oscura",
+            "url": "https://images.ygoprodeck.com/images/cards_cropped/38033126.jpg",
+            "caption": "Oscuridad",
+            "description":"Gana 300 de ataque por cada mago oscuro en el juego."
+            
+        },
+        {
+            "cardName": "El legendario exodia",
+            "url": "https://images.ygoprodeck.com/images/cards_cropped/58604027.jpg",
+            "caption": "Oscuridad",
+            "description":"Solo puede ser invocado sacrificando las 5 partes de exodia."
+            
+        }
+    ]
+}
