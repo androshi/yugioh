@@ -38,11 +38,11 @@
             const superHeroesText = await response.text();
 
             const superHeroes = JSON.parse(superHeroesText);
-            populateHeader(superHeroes);
-            populateHeroes(superHeroes);
+            generateHeaders(superHeroes);
+            generateCards(superHeroes);
         }
 
-        function populateHeader(obj) {
+        function generateHeaders(obj) {
             const header = document.querySelector('header');
             const myH1 = document.createElement('h1');
             myH1.textContent = obj.deck;
@@ -53,7 +53,7 @@
             header.appendChild(myPara);
         }
 
-        function populateHeroes(obj) {
+        function generateCards(obj) {
             const section = document.querySelector('section');
             const heroes = obj.members;
 
