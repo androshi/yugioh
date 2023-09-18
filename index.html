@@ -58,11 +58,11 @@
             const heroes = obj.members;
 
             for (const hero of heroes) {
-                createCard(hero.cardName, hero.caption,hero.url,hero.description);
+                createCard(hero.cardName, hero.caption,hero.url,hero.description, hero.cardUrl);
             }
         }
 
-        function createCard(title, caption, imgURL, description) {
+        function createCard(title, caption, imgURL, description, cardUrl) {
             const container = document.getElementById('container');
             const cardDiv = document.createElement("div");
             cardDiv.classList.add("img-card", "container");
@@ -97,7 +97,7 @@
             cardLinkDiv.classList.add("card-link");
 
             const a = document.createElement("a");
-            a.href = "#";
+            a.href = cardUrl;
             a.title = "Read Full";
 
             const span = document.createElement("span");
