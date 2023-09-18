@@ -7,29 +7,31 @@
             "cardName": "Mago Oscuro",
             "url": "https://images.ygoprodeck.com/images/cards_cropped/46986419.jpg",
             "caption": "Oscuridad",
-            "description":"El ultimo brujo en terminos de ataque y defensa."
+            "description":"El ultimo brujo en terminos de ataque y defensa.",
+            "cardUrl":"https://images.ygoprodeck.com/images/cards/36996508.jpg"
             
         },
         {
             "cardName": "Mago Oscuro Toon",
             "url": "https://images.ygoprodeck.com/images/cards_cropped/21296502.jpg",
             "caption": "Oscuridad",
-            "description":"no se puede atacar en el turno que es invocado."
+            "description":"no se puede atacar en el turno que es invocado.",
+            "cardUrl":"https://images.ygoprodeck.com/images/cards/21296502.jpg"
             
         },
         {
             "cardName": "Maga Oscura",
             "url": "https://images.ygoprodeck.com/images/cards_cropped/38033126.jpg",
             "caption": "Oscuridad",
-            "description":"Gana 300 de ataque por cada mago oscuro en el juego."
-            
+            "description":"Gana 300 de ataque por cada mago oscuro en el juego.",
+            "cardUrl":"https://images.ygoprodeck.com/images/cards/38033126.jpg"
         },
         {
             "cardName": "El legendario exodia",
             "url": "https://images.ygoprodeck.com/images/cards_cropped/58604027.jpg",
             "caption": "Oscuridad",
-            "description":"Solo puede ser invocado sacrificando las 5 partes de exodia."
-            
+            "description":"Solo puede ser invocado sacrificando las 5 partes de exodia.",
+            "cardUrl":"https://images.ygoprodeck.com/images/cards/12600382.jpg"
         }
     ]
 }
